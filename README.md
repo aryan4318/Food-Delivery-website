@@ -62,6 +62,3 @@ Admin:
 - Daily/weekly/monthly sales
 - User management
 - Restaurant management
-
-## Important
-This is a portfolio/college-project frontend demo. Authentication, Google OAuth, payments, email reset, real-time tracking and database persistence are simulated with `localStorage`. For production, connect a backend/API and real authentication provider.
