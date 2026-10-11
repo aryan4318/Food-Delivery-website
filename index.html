@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodieGo — Food Delivery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="toast"></div>
+
+<header class="topbar">
+  <a class="brand" href="#" onclick="showPage('home')"><span>🍔</span> FoodieGo</a>
+  <div class="header-search" id="headerSearch">
+    <span>⌕</span><input id="globalSearch" placeholder="Search restaurant, dish or cuisine..." oninput="searchFood(this.value)">
+  </div>
+  <nav id="mainNav">
+    <button class="nav-link" onclick="showPage('home')">Home</button>
+    <button class="nav-link" onclick="showPage('restaurants')">Restaurants</button>
+    <button class="nav-link" onclick="showPage('orders')">Orders</button>
+    <button class="cart-btn" onclick="openCart()">🛒 <span>Cart</span><b id="cartCount">0</b></button>
+    <button class="profile-btn" onclick="openAccount()">Account</button>
+  </nav>
+</header>
+
+<main id="app"></main>
+
+<div class="modal hidden" id="modal">
+  <div class="modal-card" id="modalContent"></div>
+</div>
+
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="drawer-head"><h2>Your Cart</h2><button onclick="closeCart()">✕</button></div>
+  <div id="cartItems"></div>
+  <div class="cart-bottom" id="cartBottom"></div>
+</aside>
+<div class="overlay hidden" id="overlay" onclick="closeCart()"></div>
+
+<footer>
+  <div><b>🍔 FoodieGo</b><span>Simple, smart & delicious food delivery.</span></div>
+  <div>Customer • Restaurant • Admin</div>
+  <div>© 2026 FoodieGo Demo</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
